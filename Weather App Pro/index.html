@@ -70,7 +70,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Weather App Search</h1>
+        <h1>Weather App</h1>
         <input type="text" id="locationInput" placeholder="Enter city name..." />
         <button onclick="getWeather()">Get Weather</button>
         <div id="weatherResult"></div>
@@ -85,7 +85,9 @@
             }
 
             let apiKey = "3229b9335b054007bad72515251502";
-            let url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
+            // let url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
+            let url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}&aqi=yes`;
+
 
             try {
                 let response = await fetch(url);
